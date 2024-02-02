@@ -7,6 +7,29 @@ declare global {
     interface Function {
         $inject?: readonly string[] | undefined;
     }
+
+    // angular build in element directives
+    interface HTMLElementTagNameMap {
+        // skip native html elements: a, form, input, script, select, textarea since the are part of lib.dom.d.ts
+        'ng-app': HTMLElement,
+        'ng-bind-html': HTMLElement,
+        'ng-bind-template': HTMLElement,
+        'ng-controller': HTMLElement,
+        'ng-form': HTMLElement,
+        'ng-hide': HTMLElement,
+        'ng-hide-end': HTMLElement,
+        'ng-hide-start': HTMLElement,
+        'ng-include': HTMLElement,
+        'ng-jq': HTMLElement,
+        'ng-pluralize': HTMLElement,
+        'ng-show': HTMLElement,
+        'ng-show-end': HTMLElement,
+        'ng-show-start': HTMLElement,
+        'ng-switch': HTMLElement,
+        'ng-switch-default': HTMLElement,
+        'ng-switch-when': HTMLElement,
+        'ng-transclude': HTMLElement
+    }
 }
 
 export as namespace angular;
